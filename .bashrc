@@ -1,3 +1,7 @@
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
 alias ssh=~/.bin/ssh-host-color.sh
 
 alias s='git status'
