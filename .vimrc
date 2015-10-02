@@ -14,6 +14,7 @@ endif
 call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/syntastic'
+NeoBundle 'uarun/vim-protobuf'
 call neobundle#end()
 
 NeoBundleCheck
