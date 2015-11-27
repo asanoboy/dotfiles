@@ -15,9 +15,11 @@ call neobundle#begin(expand('~/.vim/bundle'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'uarun/vim-protobuf'
+NeoBundle 'joonty/vdebug'
 call neobundle#end()
 
 NeoBundleCheck
 
 let g:syntastic_python_checkers = ['pyflakes', 'pep8']
+let g:vdebug_options = { "port" : 10000 }
 syntax on
