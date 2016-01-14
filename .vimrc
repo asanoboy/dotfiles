@@ -3,6 +3,7 @@ set tabstop=4
 set autoindent
 set expandtab
 set shiftwidth=4
+set binary noeol
 
 set nocompatible
 filetype plugin indent off
@@ -23,3 +24,4 @@ NeoBundleCheck
 let g:syntastic_python_checkers = ['pyflakes', 'pep8']
 let g:vdebug_options = { "port" : 10000 }
 syntax on
+
