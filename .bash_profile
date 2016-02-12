@@ -13,3 +13,5 @@ alias d='git diff --color'
 alias l='git log --color'
 alias b='git branch'
 alias t='git tag'
+
+git config --global core.editor 'vim -c "set fenc=utf-8"'
