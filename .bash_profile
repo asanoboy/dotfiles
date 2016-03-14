@@ -4,7 +4,7 @@ test -r ~/.bashrc && . ~/.bashrc
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-export PS1="\[\e[1;32m\]\W\[\e[00m\]\[\e[2;32m\]\$(parse_git_branch)\[\e[00m\] $ "
+export PS1="\[\e[1;36m\]\u\[\e[1;34m\]@\h \[\e[1;32m\]\W\[\e[00m\]\[\e[2;32m\]\$(parse_git_branch)\[\e[00m\] \n$ "
 
 alias ssh=~/.bin/ssh-host-color.sh
 
