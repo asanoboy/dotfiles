@@ -18,10 +18,10 @@ end tell
 EOF
 }
 
-if [[ "$@" =~ anauser ]]; then
-  set_term_bgcolor 30 30 0
+if [[ "$@" =~ gs ]]; then
+  set_term_bgcolor 30 10 0
 else
-  set_term_bgcolor 0 20 20
+  set_term_bgcolor 0 0 30
 fi
 
 ssh $@
