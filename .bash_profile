@@ -21,3 +21,5 @@ if [[ -x `which colordiff` ]]; then
 else
 	alias diff='diff -u'
 fi
+
+source ~/dotfiles/.bin/git-completion.bash
