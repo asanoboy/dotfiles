@@ -18,10 +18,12 @@ end tell
 EOF
 }
 
-if [[ "$@" =~ gs ]]; then
-  set_term_bgcolor 30 10 0
+if [[ "$@" =~ gs1 ]]; then
+  set_term_bgcolor 40 10 0
+elif [[ "$@" =~ gs-dev ]]; then
+  set_term_bgcolor 20 30 0
 else
-  set_term_bgcolor 0 0 30
+  set_term_bgcolor 0 0 50
 fi
 
 ssh $@
