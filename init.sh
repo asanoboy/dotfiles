@@ -6,5 +6,5 @@ sh install.sh
 rm install.sh
 
 test -f ~/bin || mkdir -p ~/bin
-curl http://beyondgrep.com/ack-2.14-single-file > ~/bin/ack
+curl https://beyondgrep.com/ack-2.18-single-file > ~/bin/ack
 chmod 0755 ~/bin/ack
