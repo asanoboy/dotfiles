@@ -15,7 +15,7 @@ export PS1="\[\e[1;36m\]\u\[\e[1;34m\]@\h \[\e[1;32m\]\W\[\e[00m\]\[\e[1;33m\]\$
 
 # export PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 
-alias ssh=~/.bin/ssh-host-color.sh
+alias ssh=~/dotfiles/.bin/ssh-host-color.sh
 
 alias s='git status'
 alias d='git diff --color'

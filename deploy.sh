@@ -1,10 +1,12 @@
 #!/bin/bash
 
-for f in .??*
-do
-    [[ "$f" == ".git" ]] && continue
-    [[ "$f" == ".DS_Store" ]] && continue
+COMMENT=#asanoboy-dotfiles
+PROFILE=".bash_profile"
 
-    echo "$f"
-    test -r "../$f" || ln -s "$(pwd)/$f" "../$f"
-done
+grep "$COMMENT" ~/$PROFILE || ( \
+  ( echo "[Info]: Edit ~/$PROFILE" ) && \
+  ( echo "source $(pwd)/$PROFILE $COMMENT" >> ~/$PROFILE ) && \
+  ( source $(pwd)/$PROFILE ) \
+)
+
+cp .vimrc ~/.vimrc
