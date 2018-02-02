@@ -27,6 +27,9 @@ alias t='git tag'
 alias dps='docker ps'
 alias dstart='docker start'
 alias dstop='docker stop'
+alias dlist='docker container list'
+alias dcup='docker-compose up'
+alias dcdown='docker-compose down'
 
 git config --global core.editor 'vim -c "set fenc=utf-8"'
 
@@ -43,8 +46,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
 export PTOOLSPATH=/Users/asano/git/phalcon-devtools/
-export PATH=$PATH:/Users/asano/git/phalcon-devtools
-export PTOOLSPATH=/Users/asano/git/phalcon-devtools/
-export PATH=$PATH:/Users/asano/git/phalcon-devtools
-export PTOOLSPATH=/Users/asano/git/phalcon-devtools/
-export PATH=$PATH:/Users/asano/git/phalcon-devtools
+export PATH=$PATH:/Users/asano/git/phalcon-devtools:~/.local/bin
+
+alias usenvm='export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" && [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"'
