@@ -10,3 +10,4 @@ grep "$COMMENT" ~/$PROFILE || ( \
 )
 
 cp .vimrc ~/.vimrc
+cp .ackrc ~/.ackrc
