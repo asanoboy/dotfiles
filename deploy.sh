@@ -1,7 +1,7 @@
 #!/bin/bash
 
 COMMENT=#asanoboy-dotfiles
-PROFILE=".bash_profile"
+PROFILE=".zshrc"
 
 grep "$COMMENT" ~/$PROFILE || ( \
   ( echo "[Info]: Edit ~/$PROFILE" ) && \
