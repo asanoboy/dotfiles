@@ -1,9 +1,11 @@
+script_dir="$(cd "$(dirname "${(%):-%x}")" && pwd)"
+
 # git-promptの読み込み
-source ~/.zsh/git-prompt.sh
+source "${script_dir}/.bin/git-prompt.sh"
 
 # git-completionの読み込み
-fpath=(~/.zsh $fpath)
-zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.bin $fpath)
+zstyle ':completion:*:*:git:*' script "${script_dir}/.bin/git-completion.bash"
 autoload -Uz compinit && compinit
 
 # プロンプトのオプション表示設定
@@ -28,8 +30,8 @@ alias co='git checkout'
 
 git config --global core.editor 'vim -c "set fenc=utf-8"'
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
