@@ -52,6 +52,9 @@ compdef _git puu=git
 
 git config --global core.editor 'vim -c "set fenc=utf-8"'
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
 if command -v pyenv >/dev/null 2>&1; then
   echo 'pyenv is installed'
   eval "$(pyenv init -)"
