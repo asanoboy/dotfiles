@@ -26,7 +26,29 @@ alias l='git log --color'
 alias b='git branch'
 alias t='git tag'
 alias f='git fetch'
+alias a='git add'
 alias co='git checkout'
+alias cm='git commit -m'
+alias pl='git pull'
+alias plr='git pull --rebase'
+alias pu='git push'
+alias puf='git push --force-with-lease'
+alias puu='git push -u'
+
+compdef _git s=git
+compdef _git d=git
+compdef _git l=git
+compdef _git b=git
+compdef _git t=git
+compdef _git f=git
+compdef _git a=git
+compdef _git co=git
+compdef _git cm=git
+compdef _git pl=git
+compdef _git plr=git
+compdef _git pu=git
+compdef _git puf=git
+compdef _git puu=git
 
 git config --global core.editor 'vim -c "set fenc=utf-8"'
 
