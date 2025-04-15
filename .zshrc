@@ -67,3 +67,6 @@ if [ -x /opt/homebrew/bin/brew ]; then
 fi
 
 export PATH="/usr/local/opt/mysql-client/bin:$HOME/bin:$PATH"
+
+# cursorをBlockにする for ghostty
+echo -ne '\e[2 q'
