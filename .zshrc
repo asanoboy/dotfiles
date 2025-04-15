@@ -33,7 +33,7 @@ alias pl='git pull'
 alias plr='git pull --rebase'
 alias pu='git push'
 alias puf='git push --force-with-lease'
-alias puu='git push -u'
+alias puu='git push --set-upstream origin $(git symbolic-ref --short HEAD)'
 
 compdef _git s=git
 compdef _git d=git
@@ -48,7 +48,6 @@ compdef _git pl=git
 compdef _git plr=git
 compdef _git pu=git
 compdef _git puf=git
-compdef _git puu=git
 
 git config --global core.editor 'vim -c "set fenc=utf-8"'
 
