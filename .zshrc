@@ -69,3 +69,17 @@ export PATH="/usr/local/opt/mysql-client/bin:$HOME/bin:$PATH"
 
 # cursorをBlockにする for ghostty
 echo -ne '\e[2 q'
+
+# tsmux
+alias start-tmux='tmux new-session -s$(basename "$(pwd)")'
+ssh-tmux() {
+    if [ -z "$1" ]; then
+        echo "Usage: ssh-tmux username@hostname"
+        return 1
+    fi
+
+    local target=$1
+    local dirname=$(basename "$(pwd)")
+
+    TERM=xterm-256color ssh -t "$target" "zsh -lc 'tmux attach-session -t \"$dirname\" 2>/dev/null || tmux new-session -s \"$dirname\"'"
+}
