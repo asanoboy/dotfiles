@@ -83,3 +83,5 @@ ssh-tmux() {
 
     TERM=xterm-256color ssh -t "$target" "zsh -lc 'tmux attach-session -t \"$dirname\" 2>/dev/null || tmux new-session -s \"$dirname\"'"
 }
+
+source <(pnpm completion zsh)
